@@ -1,0 +1,15 @@
+begin = int(input())
+n = int(input())
+list1 = [True,True]
+for i in range(begin,n+1):
+    list1.append(True)
+
+for i in range(begin,n+1):
+    if list1[i]==True:
+        loop = i*i
+        while loop<=n:
+            list1[loop] = False
+            loop = loop+i          
+for i in range(2, len(list1)):
+    if list1[i]==True:
+        print(i)
