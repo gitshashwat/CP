@@ -1,0 +1,23 @@
+Problem: https://leetcode.com/problems/non-decreasing-array/
+
+Solution:
+
+def checkSorted(nums):
+    count = 0
+    for i in range (0,len(nums)-1):
+        if (nums[i]>nums[i+1]):
+            count+=1
+            break
+    return count
+    
+class Solution:
+    def checkPossibility(self, nums: List[int]) -> bool:
+        for i in range(0,len(nums)):
+            val = nums.pop(i)
+            count = checkSorted(nums)
+            nums.insert(i,val)
+            if count==0:
+                return True
+        return False
+        
+        
