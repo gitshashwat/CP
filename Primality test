@@ -1,0 +1,11 @@
+problem: Primality test-https://practice.geeksforgeeks.org/problems/primality-test/1/?track=dsa-workshop-1-mathematics&batchId=308#
+
+Solution:
+import math
+def isPrime(N):
+    flag=0
+    for i in range(2,int(math.sqrt(N))+1):
+        if N%i==0:
+            return False
+
+    return True
