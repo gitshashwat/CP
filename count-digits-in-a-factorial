@@ -1,0 +1,14 @@
+Problem: https://practice.geeksforgeeks.org/problems/count-digits-in-a-factorial3957/1
+
+Solution:
+import math
+class Solution:
+    def facDigits(self,N):
+        if N==0:
+            return 0
+        else:
+            digits = 0
+            for i in range(1,N+1):
+                digits = digits+math.log10(i)
+    
+        return(math.floor(digits)+1)
