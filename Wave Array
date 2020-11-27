@@ -1,0 +1,19 @@
+Problem: https://practice.geeksforgeeks.org/problems/wave-array-1587115621/1/?track=dsa-workshop-1-arrays&batchId=308#
+Solution:
+# a =  [2,4,7,8,9,10]
+a = [1,2,3,4,5]
+
+n = len(a)
+2,1,4,3,5
+if n%2==0:
+    for i in range(0,n,2):
+        temp = a[i]
+        a[i] = a[i+1]
+        a[i+1] = temp 
+    print(a)
+else:
+    for i in range(0,n-1,2):
+        temp = a[i]
+        a[i] = a[i+1]
+        a[i+1] = temp 
+    print(a)
