@@ -1,0 +1,7 @@
+Problem: https://practice.geeksforgeeks.org/problems/gp-term/1/?track=dsa-workshop-1-mathematics&batchId=308
+
+Solution:
+def termOfGP(A,B,N):
+    #Your code here
+    an = A * (B/A)**(N-1)
+    return (an)
