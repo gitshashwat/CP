@@ -1,0 +1,21 @@
+Problem: https://practice.geeksforgeeks.org/problems/quadratic-equation-roots/1/?track=dsa-workshop-1-mathematics&batchId=308#
+
+Solution:
+import math
+class Solution:
+	def quadraticRoots(self, a, b, c):
+        # code here
+        ans2 = list()
+        if (b*b)<(4*a*c):
+            ans2.append(-1)
+            return ans2
+        else:
+            val1 = math.floor(((-1*b)+(math.sqrt((b*b)-(4*a*c))))/(2*a))
+            val2 = math.floor(((-1*b)-(math.sqrt((b*b)-(4*a*c))))/(2*a))
+            if val2>val1:
+                ans2.append(val2)
+                ans2.append(val1)
+            else:
+                ans2.append(val1)
+                ans2.append(val2)
+            return ans2
